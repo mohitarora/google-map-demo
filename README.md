@@ -3,7 +3,7 @@ google-map-demo
 
 Real Time Traffic on Google Map
 
-Steps to run
+# Steps to run
 
 1. Set up apache to log user lat/long in apache access log files. Instructions are available at http://2mohitarora.blogspot.com/2013/07/log-user-lat-and-long-in-apache-log.html
 2. Set up logstash to send log file events to redis (Detailed instructions will be posted soon)
@@ -14,7 +14,7 @@ Steps to run
 7. See the magic
 
 
-How to setup logstash:
+# How to setup logstash:
 
 # Install Java
 $ yum install java-1.7.0-openjdk -y
