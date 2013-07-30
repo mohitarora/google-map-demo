@@ -36,7 +36,7 @@ $ mkdir /var/log/logstash
 $ touch /etc/logstash/shipper.conf
 
 ## Add following configuration to /etc/logstash/shipper.conf
-
+```
 input {
      file {
          type => "test"
@@ -73,6 +73,7 @@ output {
          port => "9487"
      }
 }
+```
 
 ## Running logstash
 java -jar /opt/logstash/logstash.jar agent -v -f /etc/logstash/shipper.conf --log /var/log/logstash/shipper.log &
