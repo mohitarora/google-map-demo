@@ -16,26 +16,26 @@ Real Time Traffic on Google Map
 
 # How to setup logstash:
 
-# Install Java
+## Install Java
 $ yum install java-1.7.0-openjdk -y
 
-# Create a directory to install logstash
+## Create a directory to install logstash
 $ mkdir /opt/logstash
 
-# Install logstash
+## Install logstash
 $ cd /opt/logstash
 $ wget https://logstash.objects.dreamhost.com/release/logstash-1.1.13-monolithic.jar -O logstash.jar
 
-# Create a directory for logstash configuration
+## Create a directory for logstash configuration
 $ mkdir /etc/logstash
 
-# Create a directory for logstash logs
+## Create a directory for logstash logs
 $ mkdir /var/log/logstash
 
-# Create a file for logstash configuration
+## Create a file for logstash configuration
 $ touch /etc/logstash/shipper.conf
 
-# Add following configuration to /etc/logstash/shipper.conf
+## Add following configuration to /etc/logstash/shipper.conf
 
 input {
      file {
@@ -74,5 +74,5 @@ output {
      }
 }
 
-# Running logstash
+## Running logstash
 java -jar /opt/logstash/logstash.jar agent -v -f /etc/logstash/shipper.conf --log /var/log/logstash/shipper.log &
