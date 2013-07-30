@@ -21,6 +21,8 @@ app.get('/', function (req, res) {
 io.sockets.on('connection', function (socket) {
   sub.on("message", function(channel, message){
     var jsonMessage = JSON.parse(message);
+    <!-- In line below ident and auth is just for demo because logstash pattern COMBINEDAPACHELOG provides lat long in ident and auth fileds.
+    In real world application i would change this-->
     socket.emit(channel, jsonMessage["@fields"].ident + "," + jsonMessage["@fields"].auth);
   });
 });
