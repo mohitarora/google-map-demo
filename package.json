@@ -1,0 +1,10 @@
+{
+    "name": "tutorial",
+    "description": "a tutorial on using node,redis, and express",
+    "version": "0.0.1",
+    "dependencies": {
+        "redis": "0.8.x",
+        "express":"3.x",
+        "socket.io":"0.9"
+    }
+}
