@@ -48,18 +48,19 @@ filter {
     grep {
        type => "test"
          match => [ "@message", "(.+)" ]
-         add_tag => [ "grepped" ]
     }
     date {
          type => "test"
          timestamp => "ISO8601"
-         add_tag => [ "dated" ]
     }
     grok {
          type => "test"
-         tags => "dated"
          pattern => "%{COMBINEDAPACHELOG}"
     }
+    grep {
+          type => "test"
+          match => [ "request", "(^\/$)" ]
+     }
 }
 output {
      stdout {
